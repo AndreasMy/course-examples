@@ -19,4 +19,3 @@ function slide1() {
       "polygon(0 0," + slideValue + "% 0," + slideValue + "% 100%, 0 100%)"
     );
   }
-  
