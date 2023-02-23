@@ -8,21 +8,13 @@
     <link rel="stylesheet" href="styles/style.css" />
   </head>
   <body>
-    <div class="container">
-      <img
-        class="img-comp-img"
-        src="images/01figure-under.JPG"
-        alt=""
-        width="auto"
-        height="650vmin"
-      />
+    <div class="container-one">
+      <img class="img-comp-img" src="images/01figure-under.JPG" alt="" />
       <img
         class="img-comp-overlay"
         id="overlayImg"
         src="images/01figure-over.JPG"
         alt=""
-        width="auto"
-        height="650vmin"
       />
       <input
         id="slider"
@@ -32,6 +24,24 @@
         value="50"
         id="slider"
         oninput="slide()"
+      />
+    </div>
+    <div class="continer-two">
+      <img class="img-comp2" src="images/02figure-under.JPG" alt="" />
+      <img
+        class="img-overlay2"
+        id="overlayImg2"
+        src="images/02figure-over.JPG"
+        alt=""
+      />
+      <input
+        id="slider2"
+        type="range"
+        min="0"
+        max="100"
+        value="50"
+        id="slider"
+        oninput="slide1()"
       />
     </div>
     <script src="script/script.js"></script>
