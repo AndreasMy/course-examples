@@ -4,9 +4,9 @@
   position: relative;
   align-items: center;
   justify-content: center;
-  max-width: 45rem;
+  max-width: 35rem;
   height: auto;
-  width:fit-content;
+
   overflow: hidden;
   border: solid rgb(63, 0, 0) 2px;
 }
@@ -17,14 +17,14 @@
   flex: 1 1 0;
   position: absolute;
   max-width: 100%;
-  height: auto;
+  max-height: 100%;
 }
 
 .img-comp-overlay {
   display: flex;
   flex: 1 1 0;
   max-width: 100%;
-  height: auto;
+  max-height: 100%;
   clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);
 
 }
