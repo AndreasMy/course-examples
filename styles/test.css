@@ -1,0 +1,44 @@
+.toggle-layer {
+    padding: 1rem;
+    background-color: antiquewhite;
+    border: none;
+    border-radius: 5px;
+}
+
+.container-one {
+  margin: 10px;
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  max-width: 35rem;
+  max-height: auto;
+  overflow: hidden;
+}
+
+.img-comp-overlay {
+  position: absolute;
+  transition: .5s ease;
+  opacity: 0%;
+}
+
+.img-comp-img,
+.img-comp-overlay {
+  max-width: 100%;
+  max-height: 100%;
+  border: 5px solid black;
+}
+
+@-moz-document url-prefix() {
+    .container-one {
+      margin: 10px;
+      display: flex;
+      position: relative;
+      align-items: center;
+      justify-content: center;
+      max-width: 35rem;
+      max-height: 100%;
+      overflow: hidden;
+    }
+
+  }

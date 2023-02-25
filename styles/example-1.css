@@ -9,7 +9,7 @@
   overflow: hidden;
 }
 
-.img-comp-overlay {
+.img-comp-img {
   position: absolute;
 }
 
@@ -21,10 +21,13 @@
 }
 
 .img-comp-overlay {
+  display: flex;
   clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);
 }
 
 #slider {
+  display: flex;
+  flex: 1;
   appearance: none;
   position: absolute;
   width: 100%;
@@ -60,11 +63,16 @@
     position: relative;
     align-items: center;
     justify-content: center;
-    max-width: 35rem;
+    max-width: auto;
     height: auto;
     overflow: hidden;
   }
   #slider {
-    max-width: 35rem;
+    appearance: none;
+    position: absolute;
+    width: 100%;
+    max-width: calc(100% + 7%);
+    background-color: transparent;
+    outline: none;
   }
 }
