@@ -15,7 +15,7 @@
     max-height: 100%;
     display: flex;
     border-radius: 2%;
-    border: 4px solid rgb(61, 19, 2);
+    border: 4px solid rgb(0, 0, 0);
   }
 
   .img-over {

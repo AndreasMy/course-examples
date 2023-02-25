@@ -1,8 +1,8 @@
 const opacitySlider = document.querySelector("#opacitySlider");
-const imgOverlay = document.querySelector("#imgOverlay")
- 
-function opacity() {
-    let num = opacitySlider.value
+const imgOverlay = document.querySelector("#imgOverlay");
 
-    imgOverlay.style = `opacity: ${num}%`
+function opacity() {
+  let num = opacitySlider.value;
+  imgOverlay.style = `opacity: ${num}%`;
 }
+

@@ -10,18 +10,16 @@
   height: auto;
 }
 
-.img-comp2,
-.img-overlay2 {
+.img-comp2 {
   max-width: 100%;
   max-height: 100%;
+  position: absolute;
   display: flex;
 }
 
-.img-comp2 {
-  position: absolute;
-}
-
 .img-overlay2 {
+  max-width: 100%;
+  max-height: 100%;
   clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);
 }
 
