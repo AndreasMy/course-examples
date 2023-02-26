@@ -7,6 +7,7 @@ let toggleFirstLayer = "off";
 let toggleSecondLayer = "off";
 
 toggleLayerOne.addEventListener("click", () => {
+  toggleSecondLayer = "off";
   if (toggleFirstLayer === "off") {
     overlayImgOne.style = `opacity: 100%;`;
     toggleFirstLayer = "on";
@@ -17,6 +18,7 @@ toggleLayerOne.addEventListener("click", () => {
 });
 
 toggleLayerTwo.addEventListener("click", () => {
+  toggleFirstLayer = "off";
   if (toggleSecondLayer === "off") {
     overlayImgTwo.style = `opacity: 100%;`;
     toggleSecondLayer = "on";
