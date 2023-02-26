@@ -1,10 +1,3 @@
-.toggle-layer {
-    padding: 1rem;
-    background-color: antiquewhite;
-    border: none;
-    border-radius: 5px;
-    margin: 5px;
-}
 
 .container-one {
   margin: 10px 30px 10px 30px;
@@ -21,17 +14,27 @@
     object-fit: contain;
 }
 
-.img-comp-overlay {
+.img-layer-one,
+.img-layer-two {
   position: absolute;
   transition: .5s ease;
   opacity: 0%;
 }
 
 .img-comp-img,
-.img-comp-overlay {
+.img-layer-one,
+.img-layer-two {
   max-width: 100%;
   max-height: 100%;
   border: 5px solid black;
+}
+
+.layer-btn{
+  padding: 1rem;
+  background-color: antiquewhite;
+  border: none;
+  border-radius: 5px;
+  margin: 5px;
 }
 
 @-moz-document url-prefix() {

@@ -1,13 +1,27 @@
-const overlayImg = document.querySelector("#overlayImg");
-const toggleLayer = document.querySelector("#toggleLayer");
-let toggle = "off";
+const overlayImgOne = document.querySelector("#overlayImgOne");
+const overlayImgTwo = document.querySelector("#overlayImgTwo");
+const toggleLayerOne = document.querySelector("#toggleLayerOne");
+const toggleLayerTwo = document.querySelector("#toggleLayerTwo");
 
-toggleLayer.addEventListener("click", () => {
-  if (toggle === "off") {
-    overlayImg.style = `opacity: 100%;`;
-    toggle = "on";
-  } else if (toggle === "on") {
-    overlayImg.style = `opacity: 0%;`;
-    toggle = "off";
+let toggleFirstLayer = "off";
+let toggleSecondLayer = "off";
+
+toggleLayerOne.addEventListener("click", () => {
+  if (toggleFirstLayer === "off") {
+    overlayImgOne.style = `opacity: 100%;`;
+    toggleFirstLayer = "on";
+  } else if (toggleFirstLayer === "on") {
+    overlayImgOne.style = `opacity: 0%;`;
+    toggleFirstLayer = "off";
+  }
+});
+
+toggleLayerTwo.addEventListener("click", () => {
+  if (toggleSecondLayer === "off") {
+    overlayImgTwo.style = `opacity: 100%;`;
+    toggleSecondLayer = "on";
+  } else if (toggleSecondLayer === "on") {
+    overlayImgTwo.style = `opacity: 0%;`;
+    toggleSecondLayer = "off";
   }
 });
