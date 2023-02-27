@@ -27,7 +27,7 @@
   appearance: none;
   position: absolute;
   width: calc(100% + 5%);
-  height: 15px;
+  height: 100%;
   background-color: transparent;
   outline: none;
 }
@@ -40,6 +40,11 @@
   background: rgb(214, 118, 74);
   background-size: contain;
   cursor: pointer;
+}
+
+#slider2::-webkit-slider-thumb:hover {
+  border: 3px solid rgb(214, 118, 74);
+  background: rgba(214, 118, 7, 0);
 }
 
 #slider2::-moz-range-thumb {
