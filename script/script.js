@@ -26,14 +26,33 @@ const findNum = /\d+/g;
 const path = window.location.pathname;
 const currentAddress = path.substring(7);
 const matchedNum = currentAddress.match(findNum);
-let i = parseInt(matchedNum);
+let iForward = parseInt(matchedNum);
+let ibackward = parseInt(matchedNum);
+
+
+const decrementNum = --ibackward;
+const incrementNum = ++iForward;
 
 const address = currentAddress.substring(0, 8);
-let nextPage = `../pages/${address}${++i}.html`;
-let previousPage = `../pages/${address}${--i}.html`;
+let nextPage = `../pages/${address}${incrementNum}.html`;
+let previousPage = `../pages/${address}${decrementNum}.html`;
+console.log(previousPage);
+
+function navPrevious() {
+  window.location.href = `${previousPage}`;
+  console.log(previousPage);
+}
+
+function navNext() {
+  window.location.href = `${nextPage}`;
+}
+
+function navHome() {
+  window.location.href = "../index.html"
+}
 
 console.log(matchedNum, typeof matchedNum);
-console.log(i, ++i);
+console.log(decrementNum, incrementNum);
 console.log(path);
 console.log(previousPage, nextPage);
 console.log(currentAddress, address);

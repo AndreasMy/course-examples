@@ -25,6 +25,10 @@
   clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);
 }
 
+.nav-btn {
+  color: ;
+}
+
 #slider {
   display: flex;
   flex: 1;
