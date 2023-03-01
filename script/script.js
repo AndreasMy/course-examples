@@ -33,9 +33,9 @@ console.log(currentAddress)
 const decrementNum = --ibackward;
 const incrementNum = ++iForward;
 
-const address = currentAddress.substring(0, 8);
-let nextPage = `../pages${address}${incrementNum}.html`;
-let previousPage = `../pages${address}${decrementNum}.html`;
+const address = currentAddress.substring(1, 8);
+let nextPage = `../pages/${address}${incrementNum}.html`;
+let previousPage = `../pages/${address}${decrementNum}.html`;
 console.log(previousPage);
 
 function navPrevious() {
@@ -53,6 +53,6 @@ function navHome() {
 
 console.log(matchedNum, typeof matchedNum);
 console.log(decrementNum, incrementNum);
-console.log(path);
+console.log(address);
 console.log(currentAddress, address);
 console.log(previousPage, nextPage);
