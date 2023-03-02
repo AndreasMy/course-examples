@@ -10,6 +10,7 @@ toggleLayerOne.addEventListener("click", () => {
   toggleSecondLayer = "off";
   if (toggleFirstLayer === "off") {
     overlayImgOne.style = `opacity: 100%;`;
+    overlayImgTwo.style = `opacity: 0%;`;
     toggleFirstLayer = "on";
   } else if (toggleFirstLayer === "on") {
     overlayImgOne.style = `opacity: 0%;`;
@@ -21,6 +22,7 @@ toggleLayerTwo.addEventListener("click", () => {
   toggleFirstLayer = "off";
   if (toggleSecondLayer === "off") {
     overlayImgTwo.style = `opacity: 100%;`;
+    overlayImgOne.style = `opacity: 0%;`;
     toggleSecondLayer = "on";
   } else if (toggleSecondLayer === "on") {
     overlayImgTwo.style = `opacity: 0%;`;

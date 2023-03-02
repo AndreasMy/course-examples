@@ -22,12 +22,12 @@ function slide1() {
 
 //? js knows the page location
 //? assign correct address location for nav buttons
-const findNum = /\d+/g;
-const findPath = /.*\/(.*)[0-9]*\.html/;
+const regExNum = /\d+/g;
+const regExPath = /.*\/(.*)[0-9]*\.html/;
 
 //* Get path
 const path = window.location.pathname;
-const currentPath = path.match(findPath);
+const currentPath = path.match(regExPath);
 
 //* Get html file name
 let pathName;
@@ -36,15 +36,14 @@ if (currentPath && currentPath[1]) {
 }
 
 //* Extract number and convert to int
-const currentAddress = path.substring(6);
-const matchedNum = pathName.match(findNum);
-let iForward = parseInt(matchedNum);
-let ibackward = parseInt(matchedNum);
-const decrementNum = --ibackward;
-const incrementNum = ++iForward;
+const matchedNum = pathName.match(regExNum);
+let indexBackward = parseInt(matchedNum);
+let indexForward = parseInt(matchedNum);
+const decrementNum = --indexBackward;
+const incrementNum = ++indexForward;
 
 //* Remove number from pathName and concatenate string
-const addressName = pathName.replace(findNum, "");
+const addressName = pathName.replace(regExNum, "");
 
 let nextPage = `../pages/${addressName}${incrementNum}.html`;
 let previousPage = `../pages/${addressName}${decrementNum}.html`;
@@ -62,8 +61,3 @@ function navHome() {
   window.location.href = "../index.html";
 }
 
-console.log(`addressName: ${addressName}`);
-console.log(`pathName: ${pathName}`);
-console.log(matchedNum, typeof matchedNum);
-console.log(decrementNum, incrementNum);
-console.log(previousPage, nextPage);
