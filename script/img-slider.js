@@ -5,7 +5,7 @@ const vertexSlider = document.querySelector("#vertexSlider");
 function createDivs() {
   let img = document.createElement("img");
   img.className = `image`;
-  img.src = `../images/sl-1.jpg`
+  img.src = `../images/sl-1.JPG`
   imgContainer.appendChild(img);
 
   iterationSlider.oninput = function () {
@@ -13,7 +13,7 @@ function createDivs() {
     let i = iterationSlider.value;
     img = document.createElement("img");
     img.className = `image`;
-    img.src = `../images/sl-${i}.jpg`
+    img.src = `../images/sl-${i}.JPG`
     imgContainer.appendChild(img);
   };
 }
