@@ -50,7 +50,6 @@ let previousPage = `../pages/${addressName}${decrementNum}.html`;
 
 function navPrevious() {
   window.location.href = `${previousPage}`;
-  console.log(previousPage);
 }
 
 function navNext() {

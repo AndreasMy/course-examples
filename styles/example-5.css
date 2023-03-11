@@ -69,13 +69,6 @@
   margin: 5px;
 }
 
-/* .item0,
-.item1,
-.item2,
-.item3 {
-  border: 4px solid rgb(255, 0, 0);
-} */
-
 @-moz-document url-prefix() {
   .container-one {
     margin: 10px;
