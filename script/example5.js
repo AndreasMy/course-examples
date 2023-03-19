@@ -1,105 +1,77 @@
 const imgContainer = document.querySelector("#imgContainer");
 const valueScaleContainer = document.querySelector("#valueScaleContainer");
 
-//? Images
-const imgDefault = document.querySelector("#imgDefault");
-const imgDarker = document.querySelector("#imgDarker");
-const imgMiddle = document.querySelector("#imgMiddle");
-const imgBright = document.querySelector("#imgBright");
-const imgContrast = document.querySelector("#imgContrast");
 const imgColor = document.querySelector("#imgColor");
 
 //? Buttons
 const btnColor = document.querySelector("#btnColor");
 const btnDefault = document.querySelector("#btnDefault");
-const btnDark =  document.querySelector("#btnDark");
+const btnDark = document.querySelector("#btnDark");
 const btnHalftone = document.querySelector("#btnHalftone");
 const btnLigth = document.querySelector("#btnLigth");
 const btnConstrast = document.querySelector("#btnConstrast");
 
+const div = [];
 //* create greyscale
-function createColumn(items) {
-    for (let i = 0; i < items; i++) {
-
+function createGreyScaleCol(items) {
+  for (let i = 0; i < items; i++) {
     let newRgb = 255 * 0.66 ** i;
     let gridItem = document.createElement("div");
-    gridItem.className = `grid-item item${[i]}`;
+    gridItem.className = `item${[i]}`;
+    
+    if (newRgb < 9) {
+      newRgb = 0;
+    }
 
-      if (newRgb < 9) {
-        newRgb = 0;
-      }
-
+    gridItem.style.height = `100%`
+    gridItem.style.maxWidth = `4rem`
     gridItem.style.backgroundColor = `rgb(${newRgb}, ${newRgb}, ${newRgb})`;
     valueScaleContainer.appendChild(gridItem);
-    //* 
+    div.push(gridItem);
+    //*
   }
 }
+createGreyScaleCol(10);
 
-createColumn(10);
+console.log(div);
 
-//TODO each btn uses createColumn and a function to trigger opacity
-//TODO figure out how to remove middle values or reduce their opacity 
+
+function highlightValues(...args) {
+  div.forEach((item, index) => {
+    if (args.includes(index)) {
+      item.style.border = "3px solid red";
+    } else {
+      item.style.border = "none";
+    }
+  });
+}
 
 btnColor.addEventListener("click", () => {
-  imgColor.style = `opacity: 100%;`
-
-  imgContrast.style = `opacity: 0%;`
-  imgDefault.style = `opacity: 0%;`
-  imgDarker.style = `opacity: 0%;`
-  imgMiddle.style = `opacity: 0%;`
-  imgBright.style = `opacity: 0%;`
-})
+  highlightValues(0, 1, 2, 3, 4, 5, 6, 7, 8, 9);
+  imgColor.style = `filter: grayscale(var(--value, 0%))`;
+});
 
 btnDefault.addEventListener("click", () => {
-  imgDefault.style = `opacity: 100%;`
-
-  imgColor.style = `opacity: 0%;`
-  imgDarker.style = `opacity: 0%;`
-  imgMiddle.style = `opacity: 0%;`
-  imgBright.style = `opacity: 0%;`
-  imgContrast.style = `opacity: 0%;`
-})
+  highlightValues(0, 1, 2, 3, 4, 5, 6, 7, 8, 9);
+  imgColor.style = `filter: grayscale(var(--value, 100%))`;
+});
 
 btnDark.addEventListener("click", () => {
-  imgDarker.style = `opacity: 100%;`
-
-  imgColor.style = `opacity: 0%;`
-  imgDefault.style = `opacity: 0%;`
-  imgMiddle.style = `opacity: 0%;`
-  imgBright.style = `opacity: 0%;`
-  imgContrast.style = `opacity: 0%;`
-})
+  highlightValues(3, 4, 5, 6, 7, 8, 9);
+  imgColor.style = `filter: grayscale(100%) brightness(40%) contrast(95%);`;
+});
 
 btnHalftone.addEventListener("click", () => {
-  imgMiddle.style = `opacity: 100%;`
-
-  imgColor.style = `opacity: 0%;`
-  imgDefault.style = `opacity: 0%;`
-  imgDarker.style = `opacity: 0%;`
-  imgBright.style = `opacity: 0%;`
-  imgContrast.style = `opacity: 0%;`
-})
+  highlightValues(0, 1, 2, 3, 4);
+  imgColor.style = `filter: grayscale(100%) brightness(95%) contrast(73%);`;
+});
 
 btnLigth.addEventListener("click", () => {
-  imgBright.style = `opacity: 100%;`
-
-  imgColor.style = `opacity: 0%;`
-  imgDefault.style = `opacity: 0%;`
-  imgDarker.style = `opacity: 0%;`
-  imgMiddle.style = `opacity: 0%;`
-  imgContrast.style = `opacity: 0%;`
-})
+  highlightValues(0, 1, 2, 3);
+  imgColor.style = `filter: grayscale(100%) brightness(100%) contrast(50%);`;
+});
 
 btnConstrast.addEventListener("click", () => {
-  imgContrast.style = `opacity: 100%;`
-
-  imgColor.style = `opacity: 0%;`
-  imgDefault.style = `opacity: 0%;`
-  imgDarker.style = `opacity: 0%;`
-  imgMiddle.style = `opacity: 0%;`
-  imgBright.style = `opacity: 0%;`
-})
-
-//TODO a page that breaks down straight lines and explains iterations
-//TODO improve value compression page...display only the values used and don't increase brightness above default
-//TODO 
+  highlightValues(0, 1, 2, 7, 8, 9);
+  imgColor.style = `filter: grayscale(100%) brightness(160%) contrast(130%);`;
+});

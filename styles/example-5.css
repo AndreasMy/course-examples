@@ -16,29 +16,9 @@
 
 .img-default {
   object-fit: contain;
-}
-
-.img-layer-one,
-.img-layer-two,
-.img-layer-three,
-.img-layer-four,
-.img-layer-five,
-.img-layer-six {
-  position: absolute;
-  transition: 0.7s ease;
-  opacity: 0%;
-}
-
-.img-default,
-.img-layer-one,
-.img-layer-two,
-.img-layer-three,
-.img-layer-four,
-.img-layer-five,
-.img-layer-six {
+  transition: 0.3s;
   max-width: 100%;
   max-height: 100%;
-
 }
 
 .value-scale-container {
@@ -47,11 +27,6 @@
   max-height: auto;
   width: 4rem;
   margin: 0, 10px, 0, 0;
-}
-
-.grid-item {
-  height: 100%;
-  min-width: 4rem;
 }
 
 .btn-container {
