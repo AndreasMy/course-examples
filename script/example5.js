@@ -11,8 +11,8 @@ const btnHalftone = document.querySelector("#btnHalftone");
 const btnLigth = document.querySelector("#btnLigth");
 const btnConstrast = document.querySelector("#btnConstrast");
 
-const div = [];
-//* create greyscale
+
+const divArr = [];
 function createGreyScaleCol(items) {
   for (let i = 0; i < items; i++) {
     let newRgb = 255 * 0.66 ** i;
@@ -27,17 +27,18 @@ function createGreyScaleCol(items) {
     gridItem.style.maxWidth = `4rem`
     gridItem.style.backgroundColor = `rgb(${newRgb}, ${newRgb}, ${newRgb})`;
     valueScaleContainer.appendChild(gridItem);
-    div.push(gridItem);
-    //*
+
+    //push each gridItem to divArr
+    divArr.push(gridItem);
   }
 }
 createGreyScaleCol(10);
 
-console.log(div);
+console.log(divArr);
 
 
 function highlightValues(...args) {
-  div.forEach((item, index) => {
+  divArr.forEach((item, index) => {
     if (args.includes(index)) {
       item.style.border = "3px solid red";
     } else {

@@ -10,6 +10,7 @@ function drawHexagon(vertices) {
   const r = 150;
 
   ctx.clearRect(0, 0, canvas.clientWidth, canvas.height);
+  //drawCircle()
   ctx.beginPath();
   const x = 175;
   const y = 175;
@@ -22,9 +23,13 @@ function drawHexagon(vertices) {
   ctx.stroke();
 }
 
+function drawCircle() {
+  ctx.beginPath();
+  ctx.arc(175, 175, 150, 0, 2 * Math.PI);
+  ctx.stroke();
+}
+//drawCircle()
 vertexSlider.oninput = function () {
   let vertices = vertexSlider.value;
   drawHexagon(vertices);
 };
-
-//TODO breaakdown of a leg, arm or whatever
