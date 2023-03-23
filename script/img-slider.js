@@ -10,6 +10,7 @@ function createDivs() {
     img.src = `../images/sl-${i}.JPG`;
     imgContainer.appendChild(img);
 
+    //sliderValue is needed for the if statement
     iterationSlider.oninput = function () {
       const images = document.querySelectorAll(`.image`);
       const sliderValue = iterationSlider.value;

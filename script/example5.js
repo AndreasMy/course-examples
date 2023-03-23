@@ -11,7 +11,6 @@ const btnHalftone = document.querySelector("#btnHalftone");
 const btnLigth = document.querySelector("#btnLigth");
 const btnConstrast = document.querySelector("#btnConstrast");
 
-
 const divArr = [];
 function createGreyScaleCol(items) {
   for (let i = 0; i < items; i++) {

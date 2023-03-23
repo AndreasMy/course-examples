@@ -19,13 +19,14 @@ html {
   flex-direction: column;
   justify-content: flex-start;
   font-family: "Georgia", Times New Roman, Times, serif;
-  width: 100%;
+
 }
 
 body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   background-color: rgb(45, 49, 49);
   width: 100%;
 }
@@ -36,13 +37,15 @@ p {
 }
 
 p {
-  margin: 5px;
+
   font-size: clamp(16px, 1.6vw, 22px);
   color: rgb(243, 212, 165);
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
-h1 {
+h1,
+h2, 
+h3 {
   font-size: clamp(22px, 3vw, 42px);
   padding: 10px;
   text-align: center;
@@ -72,3 +75,10 @@ h1 {
 .nav-wrapper {
   display: flex;
 }
+
+.txt-container {
+  text-align: center;
+  margin: 0 12px;
+  height: auto;
+  max-width: 45rem;
+} 

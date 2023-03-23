@@ -1,37 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../styles/example-5.css">
-    <link rel="stylesheet" href="../styles/default.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles/example-5.css" />
+    <link rel="stylesheet" href="../styles/default.css" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <h1>Kontrast</h1>
     <div class="content-container">
-    <div class="img-container" id="imgContainer">
-        <img src="../images/04value-color.jpg" alt="" class="img-default" id="imgColor">
-    </div>
-    <div class="value-scale-container" id="valueScaleContainer">
-    </div>
-</div>
-<div class="btn-wrapper">
-    <button class="layer-btn" id="btnColor">Farge</button>
-    <button class="layer-btn" id="btnDefault">Sort-hvitt</button>
-    <button class="layer-btn" id="btnHalftone">Mellomtone</button>
-    <button class="layer-btn" id="btnLigth">Lys</button>
-    <button class="layer-btn" id="btnDark">Mørk</button>
-    <button class="layer-btn" id="btnConstrast">Høy Kontrast</button>
-</div>
-    <div class="nav-wrapper">
-        <input id="navHome" class="nav-btn" type="button" onclick="navPrevious()" value="Forrige">
-        <input id="navHome" class="nav-btn" type="button" onclick="navHome()" value="Hjem">
-        <input id="navHome" class="nav-btn" type="button" onclick="navNext()" value="Neste">
+      <div class="img-container" id="imgContainer">
+        <img
+          src="../images/04value-color.jpg"
+          alt=""
+          class="img-default"
+          id="imgColor"
+        />
       </div>
+      <div class="value-scale-container" id="valueScaleContainer"></div>
+    </div>
+    <div class="btn-wrapper">
+      <button class="layer-btn" id="btnColor">Farge</button>
+      <button class="layer-btn" id="btnDefault">Sort-hvitt</button>
+      <button class="layer-btn" id="btnHalftone">Mellomtone</button>
+      <button class="layer-btn" id="btnLigth">Lys</button>
+      <button class="layer-btn" id="btnDark">Mørk</button>
+      <button class="layer-btn" id="btnConstrast">Høy Kontrast</button>
+    </div>
+    <h2>Valør Hierarki</h2>
+    <div class="txt-container">
+      <p>
+        Siden tone spekteret (lysstyrke, kontrast) til et lerret eller et ark
+        ikke klarer å nå opp mot lysstyrken til det vi observerer, må vi
+        komprimere valørene i tegningene eller maleriene våres. I et maleri, så
+        jobber man med utgangspunk fra mellomtoner til full valørskala. Vi
+        gjengir ikke selve valørene, men vi jobber heller med å hele tiden
+        ivareta forholdet mellom valørene. På den måten ivaretar vi helhets
+        intrykket igjennom hele prosessen.
+      </p>
+    </div>
+    <div class="nav-wrapper">
+      <input
+        id="navHome"
+        class="nav-btn"
+        type="button"
+        onclick="navPrevious()"
+        value="Forrige"
+      />
+      <input
+        id="navHome"
+        class="nav-btn"
+        type="button"
+        onclick="navHome()"
+        value="Hjem"
+      />
+      <input
+        id="navHome"
+        class="nav-btn"
+        type="button"
+        onclick="navNext()"
+        value="Neste"
+      />
+    </div>
 
-      <script src="../script/example5.js"></script>
-      <script src="../script/nav.js"></script>
-</body>
+    <script src="../script/example5.js"></script>
+    <script src="../script/nav.js"></script>
+  </body>
 </html>

@@ -11,15 +11,77 @@
   <body>
     <h1>Struktur: Rette Streker (2)</h1>
     <div class="content-container">
-        <div class="img-container" id="imgContainer">
-        </div>
-      </div>
-      <input type="range" class="slider" id="iterationSlider" min="1" max="6" value="1">
-      <div class="nav-wrapper">
-        <input id="navHome" class="nav-btn" type="button" onclick="navPrevious()" value="Forrige">
-        <input id="navHome" class="nav-btn" type="button" onclick="navHome()" value="Hjem">
-        <input id="navHome" class="nav-btn" type="button" onclick="navNext()" value="Neste">
-      </div>
+      <div class="img-container" id="imgContainer"></div>
+    </div>
+    <input
+      type="range"
+      class="slider"
+      id="iterationSlider"
+      min="1"
+      max="6"
+      value="1"
+    />
+    <div class="txt-container">
+      <p>
+        Illustrasjonen over demonstrerer hvordan man (1) "bokser" inn
+        proporsjonene til figuren, for så (2) å notere hvordan ting ligger i
+        forhold til hverandre.
+      </p>
+      <br />
+      <p>
+        Dette er ikke nødvendingvis streker vi inkluderer i tegningen, men
+        heller mentale notater vi gjør via å måle de store vinklene i forhold
+        til hverandre.
+      </p>
+      <br />
+      <p>
+        Deretter (3) tegner vi en såkalt "potato shape", som utgjør det grove
+        omrisset av figuren. På dette stadiet kan man fint la strekene krysse
+        over hverandre, for å bli vant til å tegne rette streker med
+        knekkpunkter.
+      </p>
+      <br />
+      <p>
+        Skyygen (4) inkluderes vanligvis samtidig med steg 3. Frem til nå har vi
+        jobbet med å etablere i grove trekk de store proporsjonene. Dette er et
+        grunnleggende, men utfordrende stadie i block - in tegningen, som ofte
+        kan ta lenger tid enn antatt. Frem til nå har strategien vært å plassere
+        hvor tegningen skal være. Siden disse strekene skal itereres over, så er
+        det viktig at man er lett på hånden for å holde tegningen åpen for
+        videre korrigering.
+      </p>
+      <br />
+      <p>
+        I de neste to stegene (5 & 6) begynner vi å spesifisere konturen av
+        skyggene og figuren ved å intordusere flere knekkpunkter. Her ser man at
+        vi begynner å nærme oss en mer realistisk formidling av figuren.
+      </p>
+      <br>
+    </div>
+    <div class="nav-wrapper">
+      <input
+        id="navHome"
+        class="nav-btn"
+        type="button"
+        onclick="navPrevious()"
+        value="Forrige"
+      />
+      <input
+        id="navHome"
+        class="nav-btn"
+        type="button"
+        onclick="navHome()"
+        value="Hjem"
+      />
+      <input
+        id="navHome"
+        class="nav-btn"
+        type="button"
+        onclick="navNext()"
+        value="Neste"
+      />
+    </div>
     <script src="../script/nav.js"></script>
     <script src="../script/img-slider.js"></script>
   </body>
+</html>

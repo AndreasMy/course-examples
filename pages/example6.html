@@ -10,15 +10,51 @@
   </head>
   <body>
     <h1>Struktur: Rette Streker (1)</h1>
-    <canvas id="polyAproxCnv" class="poly-aprox-cnv" width="350px" height="350px"></canvas>
-    <input type="range" id="vertexSlider" value="5" min="3" max="20">
-
-    <div class="nav-wrapper">
-      <input id="navHome" class="nav-btn" type="button" onclick="navPrevious()" value="Forrige">
-      <input id="navHome" class="nav-btn" type="button" onclick="navHome()" value="Hjem">
-      <input id="navHome" class="nav-btn" type="button" onclick="navNext()" value="Neste">
+    <canvas
+      id="polyAproxCnv"
+      class="poly-aprox-cnv"
+      width="350px"
+      height="350px"
+    ></canvas>
+    <input type="range" id="vertexSlider" value="5" min="3" max="20" />
+    <div class="txt-container">
+      <p>
+        Rette streker er en av grunnpillaren til block - in metoden. I
+        demonstrsjonen over ser du hvordan en trekant kan bli til en sirkel ved
+        å intordusere fler og fler knekkpukter.
+      </p>
+      <br />
+      <p>
+        Block - in er en iterativ tegne prosess som legger til rette for at
+        kunstneren kan tegne mennesker eller andre skapninger og ting som er i
+        bevegelse. Formålet er å kunne være så fleksibel som mulig. Færre
+        streker/masser = lett å justere, mange detaljer = vanskelig å justere.
+      </p>
+      <br />
     </div>
-    
+    <div class="nav-wrapper">
+      <input
+        id="navHome"
+        class="nav-btn"
+        type="button"
+        onclick="navPrevious()"
+        value="Forrige"
+      />
+      <input
+        id="navHome"
+        class="nav-btn"
+        type="button"
+        onclick="navHome()"
+        value="Hjem"
+      />
+      <input
+        id="navHome"
+        class="nav-btn"
+        type="button"
+        onclick="navNext()"
+        value="Neste"
+      />
+    </div>
     <script src="../script/img-slider.js"></script>
     <script src="../script/nav.js"></script>
     <script src="../script/poly-aprox.js"></script>
