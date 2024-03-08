@@ -17,7 +17,7 @@
 .img-layer-one,
 .img-layer-two {
   position: absolute;
-  transition: .5s ease;
+  transition: .9s ease;
   opacity: 0%;
 }
 
